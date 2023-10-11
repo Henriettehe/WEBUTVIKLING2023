@@ -15,9 +15,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+/* Lager et grid, som er mobile-first :) */
 #grid-container{
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+}
+
+header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 /* Dette gjelder for elementet med id 'logo'.
@@ -76,5 +85,12 @@ header nav ul {
    Setter bredden til bildet til 100% av forelder-elementet. */
 .default-flex article img {
     width: 100%;
+}
+
+/* For desktop: */ 
+@media only screen and (min-width: 850px) {
+    #grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
