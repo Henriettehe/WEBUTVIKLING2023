@@ -20,6 +20,28 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
+    grid-template-areas:"header" 
+                        "main" 
+                        "aside" 
+                        "footer";  
+    row-gap: 1rem;
+    column-gap: 1rem; 
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
 }
 
 /* Dette gjelder for elementet med id 'logo'.
@@ -84,6 +106,7 @@ header nav ul {
 @media only screen and (min-width: 850px) {
     #grid-container{
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
     }
     header{
         grid-column-start: 1;
