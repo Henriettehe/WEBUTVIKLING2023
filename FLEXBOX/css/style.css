@@ -22,19 +22,6 @@ body {
     grid-template-rows: repeat(4, auto);
 }
 
-header{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    /* kan også skrive det kortere med denne: grid-row: 1/2; */
-}
-
-main{
-    grid-column: 1/3;
-    grid-row: 2/3; 
-}
-
 /* Dette gjelder for elementet med id 'logo'.
    Fjerner understreking, setter fontstørrelsen til 18 piksler og tykkelsen til 600.
    Endrer tekstfargen til svart (#000). */
@@ -97,6 +84,29 @@ header nav ul {
 @media only screen and (min-width: 850px) {
     #grid-container{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        /* kan også skrive det kortere med denne: grid-row: 1/2; */
+    }
+    
+    main{
+        /* Skrevet resterende, med short-hand måten: */
+        grid-column: 1/3;
+        grid-row: 2/3; 
+    }
+    
+    aside{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    
+    footer{
+        grid-column: 1/4;
+        grid-row: 3/4;
     }
 }
 
